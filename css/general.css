@@ -55,6 +55,10 @@ Medium: 11px
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -62,6 +66,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  overflow-x: hidden;
 }
 
 /* ***********************/
@@ -141,46 +147,64 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
+
   text-decoration: none;
-  background: #e67e22;
-  color: #fff;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
 
-  /* Animation for btn hover with color and bg effects */
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
 
 .btn--full:link,
 .btn--full:visited {
-  background: #e67e22;
+  background-color: #e67e22;
   color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background: #cf711f;
-  color: #fff;
+  background-color: #cf711f;
 }
 
 .btn--outline:link,
 .btn--outline:visited {
-  background: #fff;
+  background-color: #fff;
   color: #555;
 }
 
 .btn--outline:hover,
 .btn--outline:active {
-  background: #fdf2e9;
-  color: #555;
+  background-color: #fdf2e9;
 
-  /* Trick to add border inside btn*/
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 /* Link style sample */
@@ -219,6 +243,12 @@ body {
   height: 3rem;
   color: #e67e22;
 }
+
+/* Change Focus */
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+} */
 
 /* HELPER CLASSES */
 .margin-right-sm {
