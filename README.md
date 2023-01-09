@@ -1,6 +1,8 @@
 # Alice Restaurent
 
-A restaurent web project using html, css, javascript
+A restaurent web project
+
+Tech stack: Html, Css, Javascript
 
 
 
@@ -8,5 +10,4 @@ A restaurent web project using html, css, javascript
 
 Visit the project at:
 
-https://alicerestaurant.netlify.app/
-
+https://alice-restaurant.vercel.app/
